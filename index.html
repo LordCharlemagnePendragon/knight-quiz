@@ -35,9 +35,9 @@
             event.preventDefault();
             let form = document.getElementById("quizForm");
             let data = new FormData(form);
-            let description = `Your knight is a ${data.get("physique")} ${data.get("gender")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}.
-            Armed with a ${data.get("weapon")}, they march into battle with a ${data.get("cape")} and don the colors of ${data.get("color_theme")} with a ${data.get("emblem")} emblazoned on their chest.
-            Battle-worn with a ${data.get("scars")}, they radiate power with ${data.get("aura")}.`;
+            let description = `I am a ${data.get("physique")} ${data.get("gender")} ${data.get("race")}, wearing a ${data.get("helmet")} and clad in ${data.get("armor")}.
+            Armed with my ${data.get("weapon")}, I march into battle with ${data.get("cape")} and don the colors of ${data.get("color_theme")}, with a ${data.get("emblem")} emblazoned on my chest.
+            Battle-worn with a ${data.get("scars")}, I radiate power with ${data.get("aura")} as I stand ready for combat.`;
             document.getElementById("result").innerText = description;
         }
     </script>
@@ -144,10 +144,6 @@
             <button type="submit">Forge My Knight!</button>
         </form>
         <h2 id="result"></h2>
-    </div>
-</body>
-</html>
-
     </div>
 </body>
 </html>
