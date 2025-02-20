@@ -30,11 +30,20 @@
             background-color: #e6b800;
         }
     </style>
+    <script>
+        function generateKnight(event) {
+            event.preventDefault();
+            let form = document.getElementById("quizForm");
+            let data = new FormData(form);
+            let description = `Your knight is a ${data.get("physique")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}. Armed with a ${data.get("weapon")}, they march into battle with a ${data.get("cape")} and don the colors of ${data.get("color_theme")} with a ${data.get("emblem")} emblazoned on their chest. Battle-worn with a ${data.get("scars")}, they radiate power with ${data.get("aura")}.`;
+            document.getElementById("result").innerText = description;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Knight Customization Quiz ⚔️</h1>
-        <form id="quizForm">
+        <form id="quizForm" onsubmit="generateKnight(event)">
             <div class="question">
                 <label>1. What is your knight’s physique?</label><br>
                 <select name="physique">
@@ -147,6 +156,7 @@
             </div>
             <button type="submit">Forge My Knight!</button>
         </form>
+        <h2 id="result"></h2>
     </div>
 </body>
 </html>
