@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
+            background-color: black;
             color: white;
-            text-align: center;
+            text-align: left;
+            padding: 20px;
         }
         .container {
-            width: 80%;
+            width: 60%;
             margin: auto;
-            padding: 20px;
         }
         .question {
             margin-bottom: 20px;
@@ -35,7 +35,7 @@
             event.preventDefault();
             let form = document.getElementById("quizForm");
             let data = new FormData(form);
-            let description = `Your knight is a ${data.get("physique")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}.
+            let description = `Your knight is a ${data.get("physique")} ${data.get("gender")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}.
             Armed with a ${data.get("weapon")}, they march into battle with a ${data.get("cape")} and don the colors of ${data.get("color_theme")} with a ${data.get("emblem")} emblazoned on their chest.
             Battle-worn with a ${data.get("scars")}, they radiate power with ${data.get("aura")}.`;
             document.getElementById("result").innerText = description;
@@ -56,7 +56,14 @@
                 </select>
             </div>
             <div class="question">
-                <label>2. What is your knight’s race?</label><br>
+                <label>2. What is your knight’s gender?</label><br>
+                <select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>3. What is your knight’s race?</label><br>
                 <select name="race">
                     <option>Human</option>
                     <option>Elf</option>
@@ -69,7 +76,7 @@
                 </select>
             </div>
             <div class="question">
-                <label>3. What kind of helmet do you wear?</label><br>
+                <label>4. What kind of helmet do you wear?</label><br>
                 <select name="helmet">
                     <option>No helmet</option>
                     <option>Open-face helmet</option>
@@ -81,7 +88,7 @@
                 </select>
             </div>
             <div class="question">
-                <label>4. What kind of armor do you wear?</label><br>
+                <label>5. What kind of armor do you wear?</label><br>
                 <select name="armor">
                     <option>Heavy plate armor</option>
                     <option>Chainmail & leather</option>
@@ -92,7 +99,7 @@
                 </select>
             </div>
             <div class="question">
-                <label>5. What weapon do you wield?</label><br>
+                <label>6. What weapon do you wield?</label><br>
                 <select name="weapon">
                     <option>Greatsword</option>
                     <option>Longsword & shield</option>
@@ -105,14 +112,14 @@
                 </select>
             </div>
             <div class="question">
-                <label>6. Does your knight wear a cape?</label><br>
+                <label>7. Does your knight wear a cape?</label><br>
                 <select name="cape">
                     <option>Yes! A heroic, flowing cape</option>
                     <option>No, capes just get in the way</option>
                 </select>
             </div>
             <div class="question">
-                <label>7. What is your knight’s color theme?</label><br>
+                <label>8. What is your knight’s color theme?</label><br>
                 <select name="color_theme">
                     <option>Black & Gold</option>
                     <option>Crimson & Silver</option>
@@ -123,7 +130,7 @@
                 </select>
             </div>
             <div class="question">
-                <label>8. What emblem is on your chest or shield?</label><br>
+                <label>9. What emblem is on your chest or shield?</label><br>
                 <select name="emblem">
                     <option>Dragon Slayer</option>
                     <option>Phoenix Rising</option>
@@ -134,31 +141,13 @@
                     <option>Blank</option>
                 </select>
             </div>
-            <div class="question">
-                <label>9. Does your knight have battle scars or accessories?</label><br>
-                <select name="scars">
-                    <option>Scarred face</option>
-                    <option>Eyepatch</option>
-                    <option>Magic tattoos</option>
-                    <option>Metal prosthetic limb</option>
-                    <option>Dragon fang necklace</option>
-                </select>
-            </div>
-            <div class="question">
-                <label>10. What magical aura surrounds your knight?</label><br>
-                <select name="aura">
-                    <option>Flaming sword</option>
-                    <option>Glowing eyes</option>
-                    <option>Dark mist</option>
-                    <option>Electric sparks</option>
-                    <option>Holy radiance</option>
-                    <option>Blood-dripping blade</option>
-                    <option>Frozen armor</option>
-                </select>
-            </div>
             <button type="submit">Forge My Knight!</button>
         </form>
         <h2 id="result"></h2>
+    </div>
+</body>
+</html>
+
     </div>
 </body>
 </html>
