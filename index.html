@@ -35,7 +35,9 @@
             event.preventDefault();
             let form = document.getElementById("quizForm");
             let data = new FormData(form);
-            let description = `Your knight is a ${data.get("physique")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}. Armed with a ${data.get("weapon")}, they march into battle with a ${data.get("cape")} and don the colors of ${data.get("color_theme")} with a ${data.get("emblem")} emblazoned on their chest. Battle-worn with a ${data.get("scars")}, they radiate power with ${data.get("aura")}.`;
+            let description = `Your knight is a ${data.get("physique")} ${data.get("race")} wearing a ${data.get("helmet")} and clad in ${data.get("armor")}.
+            Armed with a ${data.get("weapon")}, they march into battle with a ${data.get("cape")} and don the colors of ${data.get("color_theme")} with a ${data.get("emblem")} emblazoned on their chest.
+            Battle-worn with a ${data.get("scars")}, they radiate power with ${data.get("aura")}.`;
             document.getElementById("result").innerText = description;
         }
     </script>
